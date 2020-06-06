@@ -4,6 +4,12 @@
 html {
   scroll-behavior: smooth;
 }
+.abc{
+  background-color: #FFEBE9;
+}
+.display-responsive{
+  font-size:50px;
+}
 .main1>.row {
   background-image: url("76515.jpg25.jpg");
   height: 600px;
@@ -40,13 +46,22 @@ a {
   margin-right: auto;
 }
 @media (max-width: 880px) {
-  .inl > img {
-    width:100px;
-    height:100px;
+
+  .display-responsive{
+    font-size:25px;
   }
-  .inl1 > img {
-    width:180px;
-    height:90px;
+  .box3
+  {
+    padding-left:100px;;
+    padding-right:100px;
+
+
+  }
+}
+@media (min-width: 880px) {
+  .car
+  {
+    padding-top: 80px;
   }
 
 }
@@ -74,12 +89,12 @@ h1 {
  z-index:15;
 }
 .inl > img {
-  width:120px;
-  height:120px;
+  width:100px;
+  height:100px;
 }
 .inl1 > img {
-  width:220px;
-  height:110px;
+  width:200px;
+  height:90px;
 }
 .example{
 position:absolute;
@@ -89,28 +104,30 @@ position:absolute;
   width:250px;
 }
 
-.car
-{
-  padding-top: 150px;
-}
-
-
-
-
-
-
-
-
 
 
 
 
 
 /*header*/
+@media (min-width: 880px) {
+  .header
+  {
+     position: fixed;
+   }
+
+
+}
+@media (max-width: 880px) {
+  .header
+  {
+     position: relative;
+   }
+ }
 
 .header
 {
-  position: fixed;
+
    top: 0;
    left: 0;
    width: 100%;
@@ -142,7 +159,7 @@ position:absolute;
   display: inline-block;
   font-size: 22px;
   color: #fff;
-  padding: 10px 10px 10px 10px;
+
 }
 
 .nav > .nav-btn {
@@ -157,7 +174,7 @@ position:absolute;
 
 .nav > .nav-links > a {
   display: inline-block;
-  padding: 13px 10px 13px 10px;
+  padding: 13px 5px 13px 10px;
   text-decoration: none;
   color: #efefef;
 }
@@ -171,6 +188,12 @@ position:absolute;
 }
 
 @media (max-width:880px) {
+  .nav {
+    height: 30px;
+    width: 100%;
+    background-color: #4d4d4d;
+    position: relative;
+  }
   .nav > .nav-btn {
     display: inline-block;
     position: absolute;
@@ -179,19 +202,20 @@ position:absolute;
   }
   .nav > .nav-btn > label {
     display: inline-block;
-    width: 50px;
-    height: 50px;
-    padding: 13px;
+    width: 40px;
+    height: 25px;
+    
   }
   .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
     background-color: rgba(0, 0, 0, 0.3);
   }
   .nav > .nav-btn > label > span {
     display: block;
-    width: 25px;
-    height: 10px;
+    width: 40px;
+    height: 8px;
     border-top: 2px solid #eee;
   }
+
   .nav > .nav-links {
     position: absolute;
     display: block;
@@ -200,18 +224,20 @@ position:absolute;
     height: 0px;
     transition: all 0.3s ease-in;
     overflow-y: hidden;
-    top: 50px;
+    top: 30px;
     left: 0px;
+    font-size:15px;
   }
   .nav > .nav-links > a {
     display: block;
     width: 100%;
+      padding: 10px 1px 5px 1px;
   }
   .nav > #nav-check:not(:checked) ~ .nav-links {
     height: 0px;
   }
   .nav > #nav-check:checked ~ .nav-links {
-    height: calc(100vh - 50px);
+    height: 200px;
     overflow-y: auto;
   }
 }
