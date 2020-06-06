@@ -16,7 +16,7 @@ return(
       params={{
       particles: {
       number: {
-      value: 200,
+      value: 80,
       density: {
       enable: true,
       value_area: 1000,
@@ -26,7 +26,7 @@ return(
       }}
       />
       <div class="inl">
-         <img src={logo} class="rounded-circle"/>
+         <img src={logo} class="rounded-circle img-fluid"/>
       </div>
       <div class="inl1">
          <img src={logo2} class="rounded i"/>
@@ -37,6 +37,7 @@ return(
          </div>
          <div class="nav-btn">
             <label for="nav-check">
+            <span></span>
             <span></span>
             <span></span>
             <span></span>
@@ -51,62 +52,51 @@ return(
          </div>
       </div>
    </div>
-   <div class="car"></div>
-   <div class="container-fluid main1">
-      <div class="row">
-         <div class="col-md-4" data-aos="slide-up">
-            <h2 class="display-1">Experience app development with applex.in</h2>
-            <br/>
-            <p> Bring your mobile app ideas into life with us</p>
-            <br/>
-            <button type="button" class="btn btn-primary" ><a href="#" > Learn More </a></button>
-         </div>
-      </div>
-   </div>
+   <div class="car container"></div>
    <div class="container tmarginm" id="ABOUT">
       <p class="lead text-center ">ABOUT US</p>
-      <h2 class="display-3 text-center">We help brands and individuals solve their app related challenges with gratifying solutions</h2>
+      <h2 class="display-responsive text-center">We help brands and individuals solve their app related challenges with gratifying solutions</h2>
       <p class="lead text-center tmargin">We are a group of professionals who believe that in this growing scenario of digitization and innovation, mobile based applications are the need of the day.
          applex.in can help your business or start-up reach out to the millions of smartphone users worldwide.
       </p>
    </div>
    <div class="container tmarginm ">
       <p class="lead text-center">WHAT WE DO</p>
-      <h2 class="display-3 text-center">Amazing features to convince you to use our products and services</h2>
+      <h2 class="display-responsive text-center">Amazing features to convince you to use our products and services</h2>
       <p class="lead text-center tmargin ">Mobile apps can help increase engagement and foster customer loyalty and brand recognition. If you’re looking for a team to support your mobile application development project, applex.in can help. We offer cutting-edge research, development, and mobile application design to match your unique project requirements. We also provide quality assurance by industry professionals who ensure your project is done to your complete satisfaction and produces the results you’re looking for. Finally, our mobile application solutions can be built and tested to function seamlessly across any mobile device, whether it is a small smartphone or a large tablet.
       </p>
    </div>
-   <div class="container tmarginm ">
+   <div class="container tmargin ">
       <div class="row tmargin">
-         <div class="col-md-6 box" data-aos="slide-up">
+         <div class="col-md-6 box" data-aos="zoom-in">
             <div class="align-items-center">
-               <h2 class="display-3 text-center"><img src="https://applex.in/wp-content/uploads/2017/06/editing-free-img.png"/><br/>Design</h2>
+               <h2 class="display-responsive text-center "><img src="https://applex.in/wp-content/uploads/2017/06/editing-free-img.png"/><br/>Design</h2>
                <br/>
                <p class="lead text-center" >Best in class UI/UX designs with regular updates to make your app stay updated with the latest design trends.
                </p>
             </div>
          </div>
-         <div class="col-md-6 box" data-aos="slide-up">
+         <div class="col-md-6 box" data-aos="zoom-in">
             <div class="align-items-center">
-               <h2 class="display-3 text-center">  <img src="https://applex.in/wp-content/uploads/2017/06/coding-free-img.png"/><br/>Development</h2>
+               <h2 class="display-responsive text-center">  <img src="https://applex.in/wp-content/uploads/2017/06/coding-free-img.png"/><br/>Development</h2>
                <br/>
                <p class="lead text-center">Tailor-made apps underpinned by deep knowledge of material design and enterprise-grade mobile security can create a unified experience across varied screen sizes.
                </p>
             </div>
          </div>
       </div>
-      <div class="row tmargin">
-         <div class="col-md-6 box" data-aos="slide-up">
+      <div class="row">
+         <div class="col-md-6 box" data-aos="zoom-in">
             <div class="align-items-center">
-               <h2 class="display-3 text-center">  <img src="https://applex.in/wp-content/uploads/2017/06/support-free-img.png"/><br/>Debugging &Testing</h2>
+               <h2 class="display-responsive text-center">  <img src="https://applex.in/wp-content/uploads/2017/06/support-free-img.png"/><br/>Debugging &Testing</h2>
                <br/>
                <p class="lead text-center">Extensive debugging and testing to ensure that the end user gets to experience a completely bug-free product
                </p>
             </div>
          </div>
-         <div class="col-md-6 box" data-aos="slide-up">
+         <div class="col-md-6 box" data-aos="zoom-in">
             <div class="align-items-center">
-               <h2 class="display-3 text-center" >  <img src="https://applex.in/wp-content/uploads/2017/06/marketing-1-free-img.png"/><br/>Help & Support</h2>
+               <h2 class="display-responsive text-center" >  <img src="https://applex.in/wp-content/uploads/2017/06/marketing-1-free-img.png"/><br/>Help & Support</h2>
                <br/>
                <p class="lead text-center ">Get 24×7 help and support regarding any app you want us to develop for you or your company.
                </p>
@@ -114,31 +104,27 @@ return(
          </div>
       </div>
    </div>
-   <div class="container-fluid tmarginm ">
+   <div class="container tmarginm ">
       <br/>
       <div class="row">
          <div class="col-md-6">
-            <img height="500px" src=" https://applex.in/wp-content/uploads/2020/03/rsz_21430-min_1-2048x1361.jpg" alt="" class="w-100" data-aos="slide-right"/>
+            <img height="400px" src=" https://applex.in/wp-content/uploads/2020/03/rsz_21430-min_1-2048x1361.jpg" alt="" class="w-100"/>
          </div>
          <div class="col-md-6">
-            <div class=" align-items-center h-100" data-aos="fade-right">
-               <h2 class="text-center display-3" >Why Choose Us?</h2>
+            <div class=" align-items-center">
+               <h2 class="text-center display-responsive" >Why Choose Us?</h2>
                <br/>
                <p class="lead text-center">
                   Quality Designs<br/>
-                  _________________________________________
                </p>
                <p class="lead text-center">
                   24×7 Live Support<br/>
-                  _________________________________________
                </p>
                <p class="lead text-center">
                   Result Oriented Projects<br/>
-                  _________________________________________
                </p>
                <p class="lead text-center">
                   Constant Monitorization<br/>
-                  _________________________________________
                </p>
                <p class="lead text-center" >
                   Experienced Professionals
@@ -149,7 +135,7 @@ return(
    </div>
    <div class="container tmarginm" id="PROJECT">
       <p class="lead text-center">EXPERIENCE</p>
-      <h2 class="text-center display-2">Our Projects</h2>
+      <h2 class="text-center display-responsive">Our Projects</h2>
       <br/>
       <div class="row tmargin">
          <div class="col-md-4 box2">
@@ -157,7 +143,7 @@ return(
          </div>
          <div class="col-md-8">
             <div class="align-items-center h-100">
-               <div class="col" data-aos="slide-up">
+               <div class="col">
                   <h2 class="display-3">stiQR it</h2>
                   <h4 class="display-4">e-Verification for online certificates</h4>
                   <p class="lead">stiQR it Verifications ensures that no misrepresentation of information occurs and verifies that your credentials are uniquely yours.
@@ -175,7 +161,7 @@ return(
          </div>
          <div class="col-md-8 order-md-1">
             <div class="align-items-center h-100">
-               <div class="col"data-aos="slide-up">
+               <div class="col">
                   <h2 class="display-3" >SNAPLINGO</h2>
                   <h4 class="display-4">One stop destination for all image to text (OCR) conversion troubles.</h4>
                   <p class="lead">Want to extract text from any image, edit and save as doc/pdf? Want to scan QR/Bar codes? Want to locate a place from a signboard and translate? Want to search images in google?
@@ -194,9 +180,9 @@ return(
          </div>
          <div class="col-md-8">
             <div class=" align-items-center h-100">
-               <div class="col" data-aos="slide-up">
+               <div class="col">
                   <h2 class="display-3">INNOVACION</h2>
-                  <h4 class="display-3">Get to know the events, register and gear up for the annual IEM-UEM techfest, Innovacion.</h4>
+                  <h4 class="display-4">Get to know the events, register and gear up for the annual IEM-UEM techfest, Innovacion.</h4>
                   <p class="lead">Must be confused which exhibition to attend, participate and which events to register and how. Want the complete set of information along with live updates on spot? Want to know your ID, your team ID that is hard to remember?
                      We made that easier for you with this app.
                      <br /><br />
@@ -209,32 +195,32 @@ return(
    </div>
    <div class="container-fluid tmarginm ">
       <p class="lead text-center ">FACTS</p>
-      <h2 class="display-2 text-center">Here is why we claim to be the best choice for you!</h2>
+      <h2 class="display-responsive text-center">Here is why we claim to be the best choice for you!</h2>
       <div class="row tmargin">
          <div class="col-md-3" data-aos="flip-right">
             <div class="align-items-center">
-               <h2 class="display-3 text-center"><img src="https://applex.in/wp-content/uploads/2017/06/projects-icon-free-img.png"/><br/>5</h2>
+               <h2 class="display-responsive text-center"><img src="https://applex.in/wp-content/uploads/2017/06/projects-icon-free-img.png"/><br/>5</h2>
                <p class="lead text-center" >Projects Completed
                </p>
             </div>
          </div>
          <div class="col-md-3" data-aos="flip-right">
             <div class="align-items-center">
-               <h2 class="display-3 text-center">  <img src="https://applex.in/wp-content/uploads/2017/06/heart-icon-free-img.png"/><br/>1K+</h2>
+               <h2 class="display-responsive text-center">  <img src="https://applex.in/wp-content/uploads/2017/06/heart-icon-free-img.png"/><br/>1K+</h2>
                <p class="lead text-center">Happy Users
                </p>
             </div>
          </div>
          <div class="col-md-3" data-aos="flip-left">
             <div class="align-items-center">
-               <h2 class="display-3 text-center"><img src="https://applex.in/wp-content/uploads/2017/06/code-lines-icon-free-img.png"/><br/>1M+</h2>
+               <h2 class="display-responsive text-center"><img src="https://applex.in/wp-content/uploads/2017/06/code-lines-icon-free-img.png"/><br/>1M+</h2>
                <p class="lead text-center" >Lines of Code.
                </p>
             </div>
          </div>
          <div class="col-md-3" data-aos="flip-left">
             <div class="align-items-center">
-               <h2 class="display-3 text-center"><img src="https://applex.in/wp-content/uploads/2017/06/award-icon-free-img.png"/><br/>6+</h2>
+               <h2 class="display-responsive text-center"><img src="https://applex.in/wp-content/uploads/2017/06/award-icon-free-img.png"/><br/>6+</h2>
                <p class="lead text-center" >Awards
                </p>
             </div>
@@ -243,7 +229,7 @@ return(
    </div>
    <div class="container-fluid tmarginm" id="TESTIMONIAL">
       <p class="lead text-center">TESTIMONIALS</p>
-      <h2 class="text-center display-2">Check out what people say about us!</h2>
+      <h2 class="text-center display-responsive">Check out what people say about us!</h2>
       <div class="row">
          <div class="col">
             <div class="carousel slide" data-ride="carousel" id="quote-carousel" data-interval="2500" data-pause="false">
@@ -307,44 +293,9 @@ return(
          </div>
       </div>
    </div>
-   <div class="container-fluid tmarginm ">
-      <h2 class="display-2 text-center">Who We've Worked With</h2>
-      <div class="row tmargin">
-         <div class="col-md-2" data-aos="flip-right">
-            <div class="align-items-center">
-               <h2 class="display-3 text-center"><img src="https://applex.in/wp-content/uploads/elementor/thumbs/logo1-opibusy62k8y5arhnvok74p80txivmdpwhpdtrooc0.png"/></h2>
-            </div>
-         </div>
-         <div class="col-md-2" data-aos="flip-right">
-            <div class="align-items-center">
-               <h2 class="display-3 text-center">  <img src="https://applex.in/wp-content/uploads/elementor/thumbs/imageds-onizehxb4jl0wsbs9oasi6cbjqq6kpht8o0yupfmeo.png"/></h2>
-            </div>
-         </div>
-         <div class="col-md-2" data-aos="flip-left">
-            <div class="align-items-center">
-               <h2 class="display-3 text-center"><img src="https://applex.in/wp-content/uploads/elementor/thumbs/0-1-omiek1njhpq3s6udnh404j1uip3f445zsik0hhgawg.jpg"/></h2>
-            </div>
-         </div>
-         <div class="col-md-2" data-aos="flip-left">
-            <div class="align-items-center">
-               <h2 class="display-3 text-center"><img src="https://applex.in/wp-content/uploads/elementor/thumbs/logo-omiek3j7vdsofernchx99ikrpgu5jidggruzg1dik0.png"/></h2>
-            </div>
-         </div>
-         <div class="col-md-2" data-aos="flip-left">
-            <div class="align-items-center">
-               <h2 class="display-3 text-center"><img src="https://applex.in/wp-content/uploads/elementor/thumbs/download-2-omiek88etjz41gktl1ye3ze2oe6zlzw45f4euf6jow.png"/></h2>
-            </div>
-         </div>
-         <div class="col-md-2" data-aos="flip-left">
-            <div class="align-items-center">
-               <h2 class="display-3 text-center"><img src="https://applex.in/wp-content/uploads/elementor/thumbs/download-1-omiek7akmpxtpum6qjjrjhmm30bmeasdtagxd57xv4.png"/></h2>
-            </div>
-         </div>
-      </div>
-   </div>
    <div class="container tmarginm" id="TEAM">
       <p class="lead text-center" >TEAM</p>
-      <h2 class="display-2 text-center">Meet our team of expert Developers</h2>
+      <h2 class="display-responsive text-center">Meet our team of expert Developers</h2>
       <div class="row tmargin">
          <div class="col-md-4">
             <div class="our-team">
@@ -482,13 +433,12 @@ return(
          <p class="footer-links">
             <a href="#"> Home </a>
             <br/>
-            <a href="#"> About Us </a>
+            <a href="#ABOUT"> About Us </a>
             <br/>
-            <a href="#"> Terms of Service </a>
+            <a href="https://www.termsofservicegenerator.net/live.php?token=7FQJ7cN28AvU60MqZ0b2KUrxzGGqvsMl"> Terms of Service </a>
             <br/>
-            <a href="#"> Privacy policy </a>
+            <a href="https://www.privacypolicygenerator.info/live.php?token=RAr46RbL1wa1tThNqRNcDlAXJO9Lo3fT"> Privacy policy </a>
          </p>
-         <p class="footer-company-name">© 2020 applex.in | Powered by applex.in | All rights Reserved</p>
       </div>
       <div class="footer-center">
          <div>
@@ -514,10 +464,8 @@ return(
          <p class="footer-company-about"><span>Reach us on</span></p>
          <div class="footer-icons">
             <a href="#"><i class="fa fa-facebook"></i></a>
-            <a href="#"><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-instagram"></i></a>
             <a href="#"><i class="fa fa-linkedin"></i></a>
-            <a href="#"><i class="fa fa-youtube"></i></a>
+            <p class="footer-company-name">© 2020 applex.in | Powered by applex.in | All rights Reserved</p>
          </div>
       </div>
    </footer>
