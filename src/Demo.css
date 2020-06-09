@@ -4,22 +4,10 @@
 html {
   scroll-behavior: smooth;
 }
-.abc{
-  background-color: #FFEBE9;
-}
 .display-responsive{
   font-size:50px;
 }
-.main1>.row {
-  background-image: url("76515.jpg25.jpg");
-  height: 600px;
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover;
-  padding-left: 80px;
-  padding-top:80px;
-}
-a {
+a, a:hover,a:active {
   color: white;
 }
 .tmarginm
@@ -52,22 +40,48 @@ a {
   }
   .box3
   {
-    padding-left:100px;;
-    padding-right:100px;
-
-
+    padding-left:50px;;
+    padding-right:50px;
   }
 }
 @media (min-width: 880px) {
   .car
   {
-    padding-top: 80px;
+    position: relative;
+    padding-top: 150px;
   }
+  .top-left {
+    position: absolute;
+    top: 250px;
+    left: 100px;
+  }
+  .car>img{
+    height:650px;
+  }
+
+}
+@media (max-width: 880px) {
+.car
+{
+  position: relative;
+  text-align: center;
+
+}
+
+.top-left {
+  position: absolute;
+  top: 20px;
+  left: 6px;
+}
+.car>img{
+  height:320px;
+}
 
 }
 h2 {
   color: black;
   font-family: "Arvo", cursive;
+  color:green;
 }
 p{
     font-family: "Arial", cursive;
@@ -82,18 +96,17 @@ h1 {
 }
 .inl{
  display:inline-block;
- z-index:15;
+
 }
 .inl1{
  display:inline-block;
- z-index:15;
 }
 .inl > img {
   width:100px;
   height:100px;
 }
-.inl1 > img {
-  width:200px;
+.inl1 > img{
+  width:220px;
   height:90px;
 }
 .example{
@@ -103,7 +116,9 @@ position:absolute;
   height:100px;
   width:250px;
 }
-
+section{
+  position:fixed;
+}
 
 
 
@@ -132,7 +147,7 @@ position:absolute;
    left: 0;
    width: 100%;
    z-index: 10;
-   background: black;
+   background:black;
    -webkit-box-shadow: 0 7px 8px rgba(0, 0, 0, 0.12);
    -moz-box-shadow: 0 7px 8px rgba(0, 0, 0, 0.12);
    box-shadow: 0 7px 8px rgba(0, 0, 0, 0.12);
@@ -204,7 +219,7 @@ position:absolute;
     display: inline-block;
     width: 40px;
     height: 25px;
-    
+
   }
   .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
     background-color: rgba(0, 0, 0, 0.3);
@@ -237,7 +252,7 @@ position:absolute;
     height: 0px;
   }
   .nav > #nav-check:checked ~ .nav-links {
-    height: 200px;
+    height: 220px;
     overflow-y: auto;
   }
 }
@@ -343,7 +358,7 @@ position:absolute;
 /*carousel part ie testimonial*/
 .testimonial-height
 {
-  height:300px;
+  height:350px;
 }
 #quote-carousel {
 

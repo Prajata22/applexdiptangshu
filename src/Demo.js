@@ -2,9 +2,30 @@ import React, { useEffect } from 'react';
 import logo from './applex.jpg';
 import logo2 from './159047687653948028.jpg';
 import Particles from 'react-particles-js';
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+import { Switch, BrowserRouter, Route, NavLink } from 'react-router-dom';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
-const Demo=()=>{
+const responsive = {
+superLargeDesktop: {
+breakpoint: { max: 4000, min: 3000 },
+items: 5
+},
+desktop: {
+breakpoint: { max: 3000, min: 1024 },
+items: 3
+},
+tablet: {
+breakpoint: { max: 1024, min: 464 },
+items: 2
+},
+mobile: {
+breakpoint: { max: 464, min: 0 },
+items: 1
+}
+};
+function Demo(){
 useEffect(() =>{
 Aos.init({duration:2000});
 }, []);
@@ -48,11 +69,44 @@ return(
             <a href="#PROJECT" target="_blank">Projects</a>
             <a href="#TESTIMONIAL" target="_blank">Testimonials</a>
             <a href="#TEAM" target="_blank">Team Members</a>
-            <a href="#CONTACT" target="_blank">Contact Us</a>
+            <button type="button" class="btn btn-info btn-md  ">
+               <NavLink to="/contact">Contact Us</NavLink>
+            </button>
+            <button type="button" class="btn btn-info btn-md ">
+               <NavLink to="/contact">Internships</NavLink>
+            </button>
          </div>
       </div>
    </div>
-   <div class="car container"></div>
+   <div class="car">
+      <img src="http://applex.in/wp-content/uploads/2020/03/76515.jpg25.jpg" alt="Snow" width="100%" />
+      <div class="top-left" data-aos="slide-up">
+         <h2 class="display-responsive">
+            Experience app<br/> development with<br/> applex.in<br/>
+            <br/>
+            <p class="lead">Bring your mobile app ideas into life with us  </p>
+            <button type="button" class="btn btn-info">Download Brochure <i class="fa fa-download" aria-hidden="true"></i></button><button type="button" class="btn btn-danger" onClick={()=>document.getElementById("myForm").style.display = "block"}>Request Callback</button>
+         </h2>
+      </div>
+   </div>
+   <div class="form-popup" id="myForm">
+      <form action="/action_page3.php" class="form-container">
+         <h2> Request Callback </h2>
+         <input type="text" placeholder="Enter Name*" name="tempname" required/>
+         <input type="text" placeholder="Enter Contact Number*" name="tempphone" required/>
+         <label for="adate">Date</label>
+         <input type="date" id="adate" name="adate"/>
+         <label for="appt">Select a time</label>
+         <input type="time" id="appt" name="appt"/>
+         <div class="row">
+            <input type="submit" value="Submit"/>
+         </div>
+         <br/>
+         <div class="row">
+            <button type="button" class="btn cancel" onClick={()=>document.getElementById("myForm").style.display = "none"}>Close</button>
+         </div>
+      </form>
+   </div>
    <div class="container tmarginm" id="ABOUT">
       <p class="lead text-center ">ABOUT US</p>
       <h2 class="display-responsive text-center">We help brands and individuals solve their app related challenges with gratifying solutions</h2>
@@ -108,7 +162,7 @@ return(
       <br/>
       <div class="row">
          <div class="col-md-6">
-            <img height="400px" src=" https://applex.in/wp-content/uploads/2020/03/rsz_21430-min_1-2048x1361.jpg" alt="" class="w-100"/>
+            <img height="400px" src=" https://applex.in/wp-content/uploads/2020/03/rsz_21430-min_1-2048x1361.jpg" alt="" class="w-100" data-aos="zoom-in"/>
          </div>
          <div class="col-md-6">
             <div class=" align-items-center">
@@ -149,7 +203,7 @@ return(
                   <p class="lead">stiQR it Verifications ensures that no misrepresentation of information occurs and verifies that your credentials are uniquely yours.
                      We aim to provide you with a safe and secure verification environment by scanning the QR provided on your certificate through the stiQR it application.
                      <br /><br />
-                     <button type="button" class="btn btn-primary" data-aos="slide-up"><a href="#" > Download  </a></button>
+                     <button type="button" class="btn btn-info btn-lg" data-aos="slide-up"><a href="https://play.google.com/store/apps/details?id=com.applex.stiqr_it_verifications&amp;hl=en" > Download  </a></button>
                   </p>
                </div>
             </div>
@@ -167,7 +221,7 @@ return(
                   <p class="lead">Want to extract text from any image, edit and save as doc/pdf? Want to scan QR/Bar codes? Want to locate a place from a signboard and translate? Want to search images in google?
                      Snaplingo comes as a package solution to all these problems.
                      <br /><br />
-                     <button type="button" class="btn btn-primary" data-aos="slide-up"><a href="#" > Download  </a></button>
+                     <button type="button" class="btn btn-info btn-lg" data-aos="slide-up"><a href="https://play.google.com/store/apps/details?id=com.sourajit.snaptext&amp;hl=en" > Download  </a></button>
                   </p>
                </div>
             </div>
@@ -186,7 +240,7 @@ return(
                   <p class="lead">Must be confused which exhibition to attend, participate and which events to register and how. Want the complete set of information along with live updates on spot? Want to know your ID, your team ID that is hard to remember?
                      We made that easier for you with this app.
                      <br /><br />
-                     <button type="button" class="btn btn-primary" data-aos="slide-up"><a href="#" > Download  </a></button>
+                     <button type="button" class="btn btn-info btn-lg" data-aos="slide-up"><a href="https://play.google.com/store/apps/details?id=com.applex.innovacion&hl=en" > Download  </a></button>
                   </p>
                </div>
             </div>
@@ -225,6 +279,21 @@ return(
                </p>
             </div>
          </div>
+      </div>
+   </div>
+   <div class="tmarginm container">
+      <h2 class="text-center display-responsive">Who We've Worked With</h2>
+      <div class="tmargin">
+         <Carousel responsive={responsive}
+         infinite={true} autoPlay={true} autoPlaySpeed={1500} removeArrowOnDeviceType={["tablet", "mobile","desktop"]} centerMode={true}
+         itemClass="carousel-item-padding-4-px">
+         <div><img src="https://applex.in/wp-content/uploads/elementor/thumbs/logo1-opibusy62k8y5arhnvok74p80txivmdpwhpdtrooc0.png"/></div>
+         <div><img src="https://applex.in/wp-content/uploads/elementor/thumbs/imageds-onizehxb4jl0wsbs9oasi6cbjqq6kpht8o0yupfmeo.png"/></div>
+         <div><img src="https://applex.in/wp-content/uploads/elementor/thumbs/logo-omiek3j7vdsofernchx99ikrpgu5jidggruzg1dik0.png"/></div>
+         <div><img  src="https://applex.in/wp-content/uploads/elementor/thumbs/0-1-omiek1njhpq3s6udnh404j1uip3f445zsik0hhgawg.jpg"/></div>
+         <div><img src="https://applex.in/wp-content/uploads/elementor/thumbs/download-2-omiek88etjz41gktl1ye3ze2oe6zlzw45f4euf6jow.png"/></div>
+         <div><img src="https://applex.in/wp-content/uploads/elementor/thumbs/download-1-omiek7akmpxtpum6qjjrjhmm30bmeasdtagxd57xv4.png" /></div>
+         </Carousel>;
       </div>
    </div>
    <div class="container-fluid tmarginm" id="TESTIMONIAL">
@@ -287,24 +356,24 @@ return(
                      </blockquote>
                   </div>
                </div>
-               <a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i class="fa fa-chevron-left"></i></a>
-               <a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="fa fa-chevron-right"></i></a>
+               <a data-slide="next" href="#quote-carousel" class="left carousel-control"><i class="fa fa-chevron-left"></i></a>
+               <a data-slide="prev" href="#quote-carousel" class="right carousel-control"><i class="fa fa-chevron-right"></i></a>
             </div>
          </div>
       </div>
    </div>
-   <div class="container tmarginm" id="TEAM">
+   <div class="container tmarginm" id="TEAM" >
       <p class="lead text-center" >TEAM</p>
       <h2 class="display-responsive text-center">Meet our team of expert Developers</h2>
       <div class="row tmargin">
-         <div class="col-md-4">
+         <div class="col-md-4 box3">
             <div class="our-team">
                <div class="pic">
                   <img src="https://applex.in/wp-content/uploads/2020/03/33180111_577344002648558_6925806232779358208_o.jpg"/>
                   <ul class="social">
-                     <li><a href="#" class="fa fa-facebook"></a></li>
-                     <li><a href="#" class="fa fa-instagram"></a></li>
-                     <li><a href="#" class="fa fa-linkedin"></a></li>
+                     <li><a href="https://www.facebook.com/sourajit.basu.3" class="fa fa-facebook"></a></li>
+                     <li><a href="https://www.instagram.com/bos_on_99/?hl=en" class="fa fa-instagram"></a></li>
+                     <li><a href="https://www.linkedin.com/in/sourajit-basu-4830b8187/" class="fa fa-linkedin"></a></li>
                   </ul>
                </div>
                <div class="team-content">
@@ -315,14 +384,14 @@ return(
                </div>
             </div>
          </div>
-         <div class="col-md-4">
+         <div class="col-md-4 box3">
             <div class="our-team">
                <div class="pic">
                   <img src="https://applex.in/wp-content/uploads/2020/03/80571107_143011440465361_990146418796658688_o.jpg"/>
                   <ul class="social">
-                     <li><a href="#" class="fa fa-facebook"></a></li>
-                     <li><a href="#" class="fa fa-instagram"></a></li>
-                     <li><a href="#" class="fa fa-linkedin"></a></li>
+                     <li><a href="https://www.facebook.com/ankita.de.336" class="fa fa-facebook"></a></li>
+                     <li><a href="https://www.instagram.com/ankita_de_222000/?hl=en" class="fa fa-instagram"></a></li>
+                     <li><a href="https://www.linkedin.com/in/ankita-de-9b327b198/" class="fa fa-linkedin"></a></li>
                   </ul>
                </div>
                <div class="team-content">
@@ -333,14 +402,14 @@ return(
                </div>
             </div>
          </div>
-         <div class="col-md-4">
+         <div class="col-md-4 box3">
             <div class="our-team">
                <div class="pic">
                   <img src="https://applex.in/wp-content/uploads/2020/03/WhatsApp-Image-2020-03-13-at-20.37.41-e1584889009418.jpeg"/>
                   <ul class="social">
-                     <li><a href="#" class="fa fa-facebook"></a></li>
-                     <li><a href="#" class="fa fa-instagram"></a></li>
-                     <li><a href="#" class="fa fa-linkedin"></a></li>
+                     <li><a href="https://www.facebook.com/xaviel.blast" class="fa fa-facebook"></a></li>
+                     <li><a href="'https://www.instagram.com/alex_cruze22/?hl=en" class="fa fa-instagram"></a></li>
+                     <li><a href="https://www.linkedin.com/in/prajata-samanta-61bb851a9/" class="fa fa-linkedin"></a></li>
                   </ul>
                </div>
                <div class="team-content">
@@ -351,14 +420,14 @@ return(
                </div>
             </div>
          </div>
-         <div class="col-md-4">
+         <div class="col-md-4 box3">
             <div class="our-team">
                <div class="pic">
                   <img src="https://applex.in/wp-content/uploads/2020/03/WhatsApp-Image-2020-03-09-at-20.13.23.jpeg"/>
                   <ul class="social">
-                     <li><a href="#" class="fa fa-facebook"></a></li>
-                     <li><a href="#" class="fa fa-instagram"></a></li>
-                     <li><a href="#" class="fa fa-linkedin"></a></li>
+                     <li><a href="https://www.facebook.com/sarbari.choudhury.543" class="fa fa-facebook"></a></li>
+                     <li><a href="https://www.instagram.com/sarbari.choudhury.543" class="fa fa-instagram"></a></li>
+                     <li><a href="https://www.linkedin.com/in/sarbari-choudhury-b4325b1aa/" class="fa fa-linkedin"></a></li>
                   </ul>
                </div>
                <div class="team-content">
@@ -369,14 +438,14 @@ return(
                </div>
             </div>
          </div>
-         <div class="col-md-4">
+         <div class="col-md-4 box3">
             <div class="our-team">
                <div class="pic">
                   <img src="https://applex.in/wp-content/uploads/2020/03/WhatsApp-Image-2020-03-14-at-14.11.46-e1584888490865.jpeg"/>
                   <ul class="social">
-                     <li><a href="#" class="fa fa-facebook"></a></li>
-                     <li><a href="#" class="fa fa-instagram"></a></li>
-                     <li><a href="#" class="fa fa-linkedin"></a></li>
+                     <li><a href="https://www.facebook.com/saikat.choudhury.543" class="fa fa-facebook"></a></li>
+                     <li><a href="https://www.instagram.com/saikat.choudhury.543" class="fa fa-instagram"></a></li>
+                     <li><a href="https://www.linkedin.com/in/saikat-choudhury-b3425b1aa/" class="fa fa-linkedin"></a></li>
                   </ul>
                </div>
                <div class="team-content">
@@ -387,14 +456,14 @@ return(
                </div>
             </div>
          </div>
-         <div class="col-md-4">
+         <div class="col-md-4 box3">
             <div class="our-team">
                <div class="pic">
                   <img src="https://applex.in/wp-content/uploads/2020/03/75241179_775063572949471_7798094398171906048_n.jpg"/>
                   <ul class="social">
-                     <li><a href="#" class="fa fa-facebook"></a></li>
-                     <li><a href="#" class="fa fa-instagram"></a></li>
-                     <li><a href="#" class="fa fa-linkedin"></a></li>
+                     <li><a href="https://www.facebook.com/anamikabasu95'" class="fa fa-facebook"></a></li>
+                     <li><a href="https://www.instagram.com/sushmita_absolute_love/?hl=en" class="fa fa-instagram"></a></li>
+                     <li><a href="https://www.linkedin.com/in/sushmita-biswas-77a2a4186/" class="fa fa-linkedin"></a></li>
                   </ul>
                </div>
                <div class="team-content">
@@ -407,14 +476,14 @@ return(
          </div>
          <div class="col-md-4">
          </div>
-         <div class="col-md-4">
+         <div class="col-md-4 box3">
             <div class="our-team">
                <div class="pic">
                   <img src="https://applex.in/wp-content/uploads/2020/03/Arvil-Sen-e1584888762353.jpeg"/>
                   <ul class="social">
                      <li><a href="https://www.facebook.com/arvilsen/" class="fa fa-facebook"></a></li>
-                     <li><a href="#" class="fa fa-instagram"></a></li>
-                     <li><a href="#" class="fa fa-linkedin"></a></li>
+                     <li><a href="https://www.instagram.com/arvilsen/?hl=en" class="fa fa-instagram"></a></li>
+                     <li><a href="https://www.linkedin.com/in/arvil-sen-6342a716b/" class="fa fa-linkedin"></a></li>
                   </ul>
                </div>
                <div class="team-content">
@@ -451,6 +520,10 @@ return(
             <p>+91 6290438875</p>
          </div>
          <div>
+            <i class="fa fa-whatsapp"></i>
+            <p>+91 6290438875</p>
+         </div>
+         <div>
             <i class="fa fa-envelope"></i>
             <p><a href="mailto:contact@applex.in">contact@applex.in</a></p>
          </div>
@@ -463,8 +536,9 @@ return(
          <br/>
          <p class="footer-company-about"><span>Reach us on</span></p>
          <div class="footer-icons">
-            <a href="#"><i class="fa fa-facebook"></i></a>
-            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="https://www.facebook.com/applexin-100528761563514/"><i class="fa fa-facebook"></i></a>
+            <a href="https://www.instagram.com/applex.in/"><i class="fa fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/applex-in/"><i class="fa fa-linkedin"></i></a>
             <p class="footer-company-name">© 2020 applex.in | Powered by applex.in | All rights Reserved</p>
          </div>
       </div>
