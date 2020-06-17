@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import logo from './applex.jpg';
-import logo2 from './159047687653948028.jpg';
+import logo2 from './Capture.jpg';
 import Particles from 'react-particles-js';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
@@ -17,12 +17,15 @@ return (
       params={{
       particles: {
       number: {
-      value: 80,
+      value: 40,
       density: {
       enable: true,
       value_area: 1000,
       }
       },
+      color:{value:"#2020ac"},
+      size:{value:"8"},
+      line_linked:{color:"#2020ac"},
       },
       }}
       />
@@ -50,7 +53,7 @@ return (
       </div>
    </div>
    <div class="car2">
-      <img src="http://applex.in/wp-content/uploads/2020/03/contact-us-customer-support-hotline-people-connect-call-customer-support_36325-2023.jpg" alt="Snow" width="100%"/>
+      <img src="http://applex.in/wp-content/uploads/2020/03/contact-us-customer-support-hotline-people-connect-call-customer-support_36325-2023.jpg" alt="" width="100%"/>
       <div class="top-center">
          <h2 class="display-responsive text-center">
             Why waiting?
@@ -81,6 +84,8 @@ return (
    </div>
    <div class="container tmargin">
       <h2 class="display-responsive text-center" data-aos="flip-left">Get Quotation <i class="fa fa-calculator" aria-hidden="true"></i></h2>
+      <br/>
+      <hr class="new3"/>
       <p class="lead text-center tmargin">Let us build together something great. Want to know what could be the approximate charge for your app or website? Fill up the details and get replied back within 24 hours.
       </p>
    </div>
@@ -140,10 +145,19 @@ return (
          </div>
       </form>
    </div>
+   <div class=" sbuttons">
+      <a href="#" target="_blank" class="sbutton whatsapp" tooltip="WhatsApp"><i class="fa fa-whatsapp"></i></a>
+      <a href="#" target="_blank" class="sbutton fb" tooltip="Facebook"><i class="fa fa-facebook-f"></i></a>
+      <a href="#" target="_blank" class="sbutton twitt" tooltip="Linkedin"><i class="fa fa-linkedin"></i></a>
+      <a href="#" target="_blank" class="sbutton pinteres" tooltip="Quora"><i class="fa fa-quora"></i></a>
+      <a target="_blank" class="sbutton mainsbutton" tooltip="More about Us"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+   </div>
    <div class="container tmargin" id="INTERNSHIP">
-
       <h2 class="display-responsive text-center " data-aos="flip-left">Apply for Internship
-      <img src="https://applex.in/wp-content/uploads/2019/12/preview-1-300x282.jpg"/></h2>
+         <img src="https://applex.in/wp-content/uploads/2019/12/preview-1-300x282.jpg"/>
+      </h2>
+      <br/>
+      <hr class="new3"/>
       <p class="lead text-center tmargin">Join our dynamic team as an intern and give an edge to your career. We will get back to within 24 hrs of your query.
       </p>
    </div>
@@ -209,6 +223,8 @@ return (
             <div>
                <h2 class="text-center display-responsive" >Get In Touch<br/></h2>
                <br/>
+               <hr class="new3"/>
+               <br/>
                <p class="lead text-center">
                   Salt Lake, Sector-5,<br/>
                   Kolkata<br/>
@@ -228,51 +244,65 @@ return (
    </div>
    <footer class="footer-distributed">
       <div class="footer-left">
-         <h3>About<span> applex.in </span></h3>
+         <h3>
+            IMPORTANT LINKS:<br/>
+            <hr class="new1"/>
+         </h3>
          <p class="footer-links">
-            <a href="#"> Home </a>
+         <h5>
+            <a href="#"> <i class="fa fa-caret-right" aria-hidden="true"></i> Home </a>
             <br/>
-            <a href="#ABOUT"> About Us </a>
+            ________________
             <br/>
-            <a href="https://www.termsofservicegenerator.net/live.php?token=7FQJ7cN28AvU60MqZ0b2KUrxzGGqvsMl"> Terms of Service </a>
+            <a href="#ABOUT"><i class="fa fa-caret-right" aria-hidden="true"></i> About Us </a>
             <br/>
-            <a href="https://www.privacypolicygenerator.info/live.php?token=RAr46RbL1wa1tThNqRNcDlAXJO9Lo3fT"> Privacy policy </a>
+            ________________
+            <br/>
+            <a href="https://www.termsofservicegenerator.net/live.php?token=7FQJ7cN28AvU60MqZ0b2KUrxzGGqvsMl"><i class="fa fa-caret-right" aria-hidden="true"></i> Terms of Service </a>
+            <br/>
+            ________________
+            <br/>
+            <a href="https://www.privacypolicygenerator.info/live.php?token=RAr46RbL1wa1tThNqRNcDlAXJO9Lo3fT"><i class="fa fa-caret-right" aria-hidden="true"></i> Privacy policy </a>
+            <br/>
+            ________________
+         </h5>
          </p>
       </div>
       <div class="footer-center">
          <div>
+            <h3>
+               CONTACT US:<br/>
+               <hr class="new2"/>
+            </h3>
+         </div>
+         <br/>
+         <p class="footer-links">
+         <h5>
             <i class="fa fa-map-marker"></i>
             <p>Sector V, Salt Lake<br/>Kolkata<br/>West Bengal, India.
             </p>
-         </div>
-         <div>
-            <i class="fa fa-phone"></i>
+            <br/>
+            <i class="fa fa-phone-square" aria-hidden="true"></i>
             <p>+91 6290438875</p>
-         </div>
-         <div>
-            <i class="fa fa-whatsapp"></i>
-            <p>+91 6290438875</p>
-         </div>
-         <div>
+            <br/>
             <i class="fa fa-envelope"></i>
             <p><a href="mailto:contact@applex.in">contact@applex.in</a></p>
-         </div>
+         </h5>
+         </p>
       </div>
       <div class="footer-right">
-         <p class="footer-company-about">
-            <span>About the company</span>
-            We provide custom android and ios application with best in class UI design
-         </p>
-         <br/>
-         <p class="footer-company-about"><span>Reach us on</span></p>
+         <h3>
+            REACH US ON:<br/>
+            <hr class="new1"/>
+         </h3>
          <div class="footer-icons">
             <a href="https://www.facebook.com/applexin-100528761563514/"><i class="fa fa-facebook"></i></a>
             <a href="https://www.instagram.com/applex.in/"><i class="fa fa-instagram"></i></a>
             <a href="https://www.linkedin.com/company/applex-in/"><i class="fa fa-linkedin"></i></a>
-            <p class="footer-company-name">© 2020 applex.in | Powered by applex.in | All rights Reserved</p>
          </div>
       </div>
    </footer>
+   <div class="container-fluid copyright text-center">© 2020 applex.in | Powered by applex.in | All rights Reserved</div>
 </div>
 );
 }
